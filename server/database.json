@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "system": "Switch",
+        "title": "Kirby and the Forgotten Land",
+        "rating": 3,
+        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQe7Tj_NLl_NDO8cdlMad6tV8NZU6nkn79Xg&usqp=CAU"
+    },
+    
+    {
+        "id": 2,
+        "system": "Switch",
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "rating": 5,
+        "imageURL": "https://www.gamespot.com/a/uploads/scale_tiny/1197/11970954/3181241-ig-lozbreathofthewildrelease-20170112.jpg"
+    },
+
+    {
+        
+        "id": 3,
+        "system": "Switch",
+        "title": "Animal Crossing: New Horizons",
+        "rating": 3,
+        "imageURL": "https://assets.nintendo.com/image/upload/c_fill,f_auto,q_auto,w_1200/v1/ncom/en_US/games/switch/a/animal-crossing-new-horizons-switch/hero"
+    },
+
+    {
+        
+        "id": 4,
+        "system": "Playstation",
+        "title": "The Last of Us Part II",
+        "rating": 5,
+        "imageURL": "https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png"
+    },
+
+    {
+        "id": 5,
+        "system": "Playstation",
+        "title": "Fortnite",
+        "rating": 1,
+        "imageURL": ""
+    },
+
+    {
+        "id": 6,
+        "system": "Playstation",
+        "title": "Horizon Zero Dawn",
+        "rating": 4,
+        "imageURL": "https://image.api.playstation.com/vulcan/ap/rnd/202010/0221/vC7trMorHJgbImp8PCQvpI0p.png"
+    },
+    
+    {
+        "id":  7,
+        "system": "Xbox",
+        "title": "Halo",
+        "rating": 3,
+        "imageURL": "https://upload.wikimedia.org/wikipedia/en/1/14/Halo_Infinite.png"
+    },
+
+    {
+        "id": 8,
+        "system": "Xbox",
+        "title": "Fallout",
+        "rating": 4,
+        "imageURL": "https://cdn.cdkeys.com/500x706/media/catalog/product/f/a/fallout_4.jpeg"
+    },
+
+    {
+        "id": 9,
+        "system": "Xbox", 
+        "title": "Rare Replay",
+        "rating": 3,
+        "imageURL": "https://i.ebayimg.com/images/g/8TMAAOSw~7JceiK5/s-l400.jpg"
+    }
+
+
+]
+
