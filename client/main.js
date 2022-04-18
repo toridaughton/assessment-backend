@@ -1,7 +1,7 @@
 const gamesContainer = document.getElementById(`games-container`)
 const form = document.querySelector(`form`)
 
-const baseURL = `http://localhost:4000/api`
+// const baseURL = `http://localhost:4000/api`
 
 const gamesCallback = ({data: games}) => displayGames(games)
 const errCallback = err => console.log(err.response.data)
@@ -12,7 +12,7 @@ const getAllGames = () => {
     .catch(errCallback)
 }
 
-const deleteGames = (id) => {
+const deleteGame = (id) => {
     axios.delete(`http://localhost:4000/api/games/${id}`)
     .then(gamesCallback)
     .catch(errCallback)
@@ -20,7 +20,7 @@ const deleteGames = (id) => {
 
 
 const createGame = (body) => {
-    axios.post(`http://localhost:4000/api/games/`)
+    axios.post(`http://localhost:4000/api/games/`, body)
     .then(gamesCallback)
     .catch(errCallback)
 }
@@ -32,8 +32,8 @@ const updateGame = (id, type) => {
     .catch(errCallback)
 }
 
-const submitHandler = (element) => {
-    element.preventDefault()
+const submitHandler = (event) => {
+    event.preventDefault()
 
     let title = document.getElementById(`title`)
     let rating = document.querySelector(`input[name="ratings"]:checked`)
@@ -60,12 +60,13 @@ const createGameCard = (game) => {
 
     gameCard.innerHTML = `<img alt='game cover' src=${game.imageURL} class='game-cover'/>
     <p class ='game-title'>${game.title}</p>
+    <p class='game-system'>${game.system}</p>
     <div class="btns-container">
-        <button onclick="updateGame(${game.id}, 'minus')"> - </button>
+        <button id="minus-button" onclick="updateGame(${game.id}, 'minus')"> - </button>
         <p class="game-rating">${game.rating} stars </p>
-        <button onclick="updateGame(${movie.id}, 'plus')"> + </button>
+        <button id="plus-button" onclick="updateGame(${game.id}, 'plus')"> + </button>
     </div>
-    <button onclick="deleteGames(${game.id})"> delete </button>`
+    <button id="delete-button" onclick="deleteGame(${game.id})"> delete </button>`
 
     gamesContainer.appendChild(gameCard)
 
@@ -79,6 +80,8 @@ const displayGames = arr => {
     }
 }
 
+
+
 form.addEventListener(`submit`, submitHandler)
 
 getAllGames()
@@ -86,26 +89,22 @@ getAllGames()
 
 
 
-
-
-
 document.getElementById("complimentButton").onclick = function () {
     axios.get("http://localhost:4000/api/compliment/")
-        .then(function (response) {
-          const data = response.data;
-          alert(data);
-        });
-  };
+    .then(function (response) {
+        const data = response.data;
+        alert(data);
+    });
+};
 
 
-  document.getElementById('fortuneButton').onclick = function () {
-      axios.get(`http://localhost:4000/api/fortune/`)
-      .then((res) => {
-          const fortune = res.data;
-          alert(fortune);
-      })
-  }
-
+document.getElementById('fortuneButton').onclick = function () {
+    axios.get(`http://localhost:4000/api/fortune/`)
+    .then((res) => {
+        const fortune = res.data;
+        alert(fortune);
+    })
+}
 
 
 

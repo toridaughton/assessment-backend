@@ -3,14 +3,15 @@
   <head>
     <title>Back End Assessment</title>
     <!-- did not have time to make own css, did copy demo css(ONLY -- nothing else was copied) to see if function was working.. will update -->
-    <!-- <link rel="stylesheet" href="./styles.css"/> -->
+    <link rel="stylesheet" href="./styles.css"/>
   </head>
   <body class="container">
     <h1>Games List</h1>
     <main>
       <form>
-        <input type="text" id="title" placeholder="What's the Game Title??"/>
-        <input type="text" id="img" placeholder="Insert image URL here"/>
+        <input type="text" id="image" placeholder="Insert image URL here"/>
+        <input type="text" id="system" placeholder="Gaming system"/>
+        <input type="text" id="title" placeholder="Game Title"/>
         <section id="ratings-container">
           <h4>Rate the Game</h3>
           <div id="radio-container">
@@ -56,14 +57,13 @@
             </label> 
           </div>
         </section>
-        <button>add movie</button>
+        <button id="add-game-button">add game</button>
       </form>
-      <section id=" games-container"></section>
+      <section id="games-container"></section>
 
       <section>
-        <button id="complimentButton">Get a compliment</button>
-        <button id="fortuneButton">Get a fortune!</button>
-        <!-- <button id="gamesButton">See All Games</button> -->
+        <button id="compliment-button">Get a compliment</button>
+        <button id="fortune-button">Get a fortune!</button>
       </section>
 
    </main>
